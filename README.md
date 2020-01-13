@@ -16,7 +16,9 @@ The relevant file is
 ```KarolinskaTutorial-Colab.ipynb```.   
 The file contains a link to opening it in your own colab account. 
 
-No further installations are needed.
+For this to run the following are needed:
+- A google account.
+- The ```dtp3_immunized_percent_of_one_year_olds.csv``` file to be uploaded in the directory Colab creates in the user's drive account.
 
 ## For Anaconda users
 
@@ -36,4 +38,9 @@ The relevant file is
 For this to run the following are needed:
 - Python3 [installation](https://www.python.org/downloads/)
 - Python compatible code editor
-- Several libraries
+- Install the following libraries with pip:
+    ```pip install seaborn```
+    ```pip install matplotlib```
+    ```pip install gapminder```
+    ```pip install pandas```
+    ```pip install unicodecsv```
