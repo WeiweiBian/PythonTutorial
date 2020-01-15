@@ -212,7 +212,6 @@ print(expAndImmune)
 expAndImmune = expAndImmune.drop_duplicates().reset_index(drop=True) 
 
 
-# %%
 print(expAndImmune.dtypes)
 
 expAndImmune.dtp3 = pd.to_numeric(expAndImmune.dtp3)
@@ -222,13 +221,11 @@ expAndImmune.expectancy = pd.to_numeric(expAndImmune.expectancy)
 # 
 # Grouping data is a very usefull function as it can provide an easier way of handling data and geting statistcs out of the groups.*italicized text*
 
-# %%
 print(expAndImmune.groupby(['continent']).max()) #find the max of each column for each continent
 print(expAndImmune.groupby(['continent']).expectancy.max()) #find the max of the life expectancy for each continent
 print(expAndImmune.groupby(['continent']).dtp3.min()) #find the min of the immunization data for each continent 
 
 
-# %%
 for continent, temp in expAndImmune.groupby(['continent']): #for each continent group the data and put it in a temp df
   print(continent, ':') 
   print(temp.groupby(['country'])['dtp3'].max().rename('max').sort_values(ascending = False).head(2).reset_index(drop=False)) #find the max of dtp3 immunization and print the first 2 rows in descending order
@@ -243,7 +240,6 @@ for continent, temp in expAndImmune.groupby(['continent']): #for each continent 
 # 
 # 
 
-# %%
 def baseStats(data):
   for continent, temp in data.groupby(['continent']): #for each continent group the data and put it in a temp df
     print(continent, ':') 
